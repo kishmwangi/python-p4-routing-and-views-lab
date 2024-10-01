@@ -32,7 +32,7 @@ class TestApp:
         sys.stdout = captured_out
         app.test_client().get('/print/hello')
         sys.stdout = sys.__stdout__
-        assert(captured_out.getvalue() == 'hello\n')
+        assert(captured_out.getvalue() == 'hello')
 
     def test_count_route(self):
         '''has a resource available at "/count/<parameter>".'''
